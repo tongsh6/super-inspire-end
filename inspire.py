@@ -158,6 +158,7 @@ def genString():
 
 
 @app.route('/v2/superinspire/getOSList')
+@crossdomain(origin='*')
 def returnList():
 
     response = Response(
@@ -175,11 +176,13 @@ def returnList():
 
 
 @app.route('/v2/superinspire')
+@crossdomain(origin='*')
 def hello():
     return 'hello'
 
 
 @app.route('/v2/superinspire/rmOS')
+@crossdomain(origin='*')
 def rmOS():
     try:
         containerId = request.args.get("containerId")
@@ -241,6 +244,7 @@ def rmOS():
 
 
 @app.route('/v2/superinspire/getOS')
+@crossdomain(origin='*')
 def getOS():
 
     shareUrl = "http://{0}:{1}"

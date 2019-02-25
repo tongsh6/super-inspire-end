@@ -69,7 +69,7 @@ detect_pkg_tool() {
 }
 
 clone_html(){
-    git clone https://github.com/tongsh6/super-inspire-frontend.git /var/super-inspire-frontend
+    git clone https://github.com/super-inspire/super-inspire-frontend.git /var/super-inspire-frontend
     mv /var/super-inspire-frontend/build /var/build
     rm -rf /var/super-inspire-frontend
 }

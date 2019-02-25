@@ -13,7 +13,7 @@ ENV PYTHONIOENCODING=utf-8
 
 RUN mkdir -p /superinspire/ && cd /superinspire
 WORKDIR /superinspire
-
+COPY /home/loong/super-inspire-end/ /superinspire/
 ADD requirement.txt /superinspire/
 RUN pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -r /superinspire/requirement.txt
 

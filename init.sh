@@ -68,6 +68,7 @@ detect_pkg_tool() {
     return 1
 }
 
+
 clone_html(){
     git clone https://github.com/super-inspire/super-inspire-frontend.git /var/super-inspire-frontend
     cp -r /var/super-inspire-frontend/build /var/build

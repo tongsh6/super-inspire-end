@@ -23,7 +23,7 @@ redisCli = ConnectRedis()
 create_container_client = CreateContainer()
 rm_container_client = RmContainer()
 
-
+print(os.popen('curl ip.sb').readlines())
 SERVERURL = os.popen('curl ip.sb').readlines()[0].split('\n')[0]
 
 

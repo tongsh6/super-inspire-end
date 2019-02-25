@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 import re
 import os
 import sys
@@ -12,6 +13,7 @@ from API.rmContainer import RmContainer
 from flask import render_template,redirect
 from API.createContainer import CreateContainer
 from flask import Flask,request,Response,jsonify
+from linecache import cache
 
 
 
@@ -23,8 +25,10 @@ redisCli = ConnectRedis()
 create_container_client = CreateContainer()
 rm_container_client = RmContainer()
 
-print(os.popen('curl ip.sb').readlines())
-SERVERURL = os.popen('curl ip.sb').readlines()[0].split('\n')[0]
+try:
+    SERVERURL = os.popen('curl ip.sb').readlines()[0].split('\n')[0]
+except:
+    SERVERURL = os.popen('curl ip.sb').readlines()[0]   
 
 
 OS_SWITCH = {
